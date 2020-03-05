@@ -6,9 +6,9 @@ alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar
 zumindest die folgenden Angaben umfassen:
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG:
-PROJEKTZWECK:
-VERSION oder DATUM:
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN):
+PROJEKTBEZEICHNUNG: AHF GAME
+PROJEKTZWECK: Netzwerkprogramme und Projektarbeit
+VERSION oder DATUM: 5.3.2020
+WIE IST DAS PROJEKT ZU STARTEN: später
+AUTOR(EN): Q2 IF GK
 BENUTZERHINWEISE:
