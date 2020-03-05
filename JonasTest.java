@@ -7,6 +7,11 @@
 public class JonasTest {
 
 	public JonasTest() {
-	
+		test();
+	}
+
+	private void test() {
+		// TODO Automatisch generierter Methodenstub
+		
 	}
 }
