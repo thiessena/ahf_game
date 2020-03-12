@@ -1,4 +1,4 @@
-package clientServer;
+package src.clientServer;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

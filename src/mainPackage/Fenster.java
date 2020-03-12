@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.BorderLayout;
 import java.awt.Graphics;
@@ -16,8 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-import graphicsDrawer.CorporateDesign;
-import spriteLoader.FileReader;
+import src.graphicsDrawer.CorporateDesign;
+import src.spriteLoader.DataReader;
 /**
  * Erstellt ein leeres Fenster.
  * 
@@ -33,7 +33,7 @@ public class Fenster extends JFrame implements ActionListener, KeyListener
     int width=500; 
     int height=400;
     boolean isLoaded = true;
-    FileReader mFileReader;
+    DataReader mDataReader;
     
     /**
      * Erstellt ein Fenster.

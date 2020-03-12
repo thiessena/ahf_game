@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,8 +7,8 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import elementFactory.Player;
-import graphicsDrawer.LabyrinthDrawer;
+import src.elementFactory.Player;
+import src.graphicsDrawer.LabyrinthDrawer;
 
 /**
  * Write a description of class Labyrinth here.

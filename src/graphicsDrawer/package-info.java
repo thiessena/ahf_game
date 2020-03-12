@@ -6,4 +6,4 @@
  * @version 03.02.2020
  * @see elementFactory
  */
-package graphicsDrawer;
+package src.graphicsDrawer;

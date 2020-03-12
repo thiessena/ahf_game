@@ -1,4 +1,4 @@
-package graphicsDrawer;
+package src.graphicsDrawer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import spriteLoader.SpriteLoader;
+import src.spriteLoader.SpriteLoader;
 
 /**
  * Zeichnet den Irrgarten für das {@link mainPackage.ClientLabyrinth} und das {@link mainPackage.Labyrinth}.
@@ -162,6 +162,16 @@ public class LabyrinthDrawer {
 		drawRectangle(g, x, y, pLength, pLength, new Color(200, 200, 200));
 	}
 
+	/**
+	 * Malt ein einfaches Rechteck auf ein zu definierendes Zeichenfeld.
+	 * 
+	 * @param g			Graphics, auf dem das Rechteck gezeichnet werden soll.
+	 * @param x			<code>x</code>-Koordinate des Rechtecks
+	 * @param y			<code>y</code>-Koordinate des Rechtecks
+	 * @param pWidth	Breite des Rechtecks
+	 * @param pHeight	Höhe des Rechtecks
+	 * @param pColor	Farbe des Rechtecks
+	 */
 	private void drawRectangle(Graphics g, int x, int y, int pWidth, int pHeight, Color pColor) {
 		Graphics2D g2 = (Graphics2D) g;
 

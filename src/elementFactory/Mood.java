@@ -1,4 +1,4 @@
-package elementFactory;
+package src.elementFactory;
 
 /**
  * Erstellt einen Array mit den {@link elementFactory.avatarMoods}

@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 
-import graphicsDrawer.CorporateDesign;
+import src.graphicsDrawer.CorporateDesign;
 
 /**
  * Greift auf die Ordnerstruktur zu und importiert alle nötigen Elemente.
@@ -24,7 +24,7 @@ import graphicsDrawer.CorporateDesign;
  * @version 27.01.2020
  *
  */
-public class FileReader {
+public class DataReader {
 	
 	/**
 	 * Scalewert / Größeneinheit des ClientLabyrinths (<code>1 px = 1 scl</code>).
@@ -40,7 +40,7 @@ public class FileReader {
 	/**
 	 * Instanz des FileReaders.
 	 */
-	public static FileReader sInstance;
+	public static DataReader sInstance;
 	
 	/**
 	 * Bildordner in der Ordnerstruktur.
@@ -110,7 +110,7 @@ public class FileReader {
 	 * 
 	 * @see #readFiles()
      */
-    private FileReader(String pImageFolder, String pFontFolder, String pAvatarName, String[] pImageExtensions, String[] pFontExtensions) {
+    private DataReader(String pImageFolder, String pFontFolder, String pAvatarName, String[] pImageExtensions, String[] pFontExtensions) {
     	img_dir = new File(pImageFolder);
     	font_dir = new File(pFontFolder);
     	
@@ -132,12 +132,12 @@ public class FileReader {
     	readFiles();
     }
     
-    public static FileReader getInstance() {
+    public static DataReader getInstance() {
     	return sInstance != null ? sInstance : null;
     }
     
     /**
-	 * Gibt eine Instanz des {@link spriteLoader.FileReader} zurück.
+	 * Gibt eine Instanz des {@link DataReader.FileReader} zurück.
 	 * <p>
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.
 	 * <p>
@@ -155,12 +155,12 @@ public class FileReader {
      * 
      * @see #getInstance(String, String, String, String[], String[])
      */
-	public static FileReader getInstance(String pImageFolder, String pAvatarName) {
+	public static DataReader getInstance(String pImageFolder, String pAvatarName) {
 		return getInstance(pImageFolder, "font/", pAvatarName, IMG_EXTENSIONS, FONT_EXTENSIONS);
 	}
 	
 	/**
-	 * Gibt eine Instanz des {@link spriteLoader.FileReader} zurück. Wenn bereits eine Instanz dieser Klasse 
+	 * Gibt eine Instanz des {@link DataReader.FileReader} zurück. Wenn bereits eine Instanz dieser Klasse 
 	 * vorhanden ist, so wird die existierende Instanz zurückgegeben. Andernfalls wird eine neue
 	 * Instanz initialisiert.
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.
@@ -178,9 +178,9 @@ public class FileReader {
 	 * 
 	 * @see #getInstance(String, String)
 	 */
-	public static FileReader getInstance(String pImageFolder, String pFontFolder, String pAvatarName, String[] pImageExtensions, String[] pFontExtensions) {
+	public static DataReader getInstance(String pImageFolder, String pFontFolder, String pAvatarName, String[] pImageExtensions, String[] pFontExtensions) {
 		if(sInstance == null) {
-			sInstance = new FileReader(pImageFolder, pFontFolder, pAvatarName, pImageExtensions, pFontExtensions);
+			sInstance = new DataReader(pImageFolder, pFontFolder, pAvatarName, pImageExtensions, pFontExtensions);
 		}
 		return sInstance;
 	}

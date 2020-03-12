@@ -1,4 +1,4 @@
-package graphicsDrawer;
+package src.graphicsDrawer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -12,9 +12,9 @@ import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.RoundRectangle2D;
 
-import elementFactory.avatarMoods;
-import mainPackage.ClientLabyrinth;
-import spriteLoader.SpriteLoader;
+import src.elementFactory.avatarMoods;
+import src.mainPackage.ClientLabyrinth;
+import src.spriteLoader.SpriteLoader;
 
 /**
  * Zeichnet Dialoge in ein vom ClientLabyrinth übergegebenes Graphics Panel.

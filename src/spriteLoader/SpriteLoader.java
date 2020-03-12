@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -8,12 +8,12 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-import elementFactory.Mood;
-import elementFactory.Player;
-import elementFactory.avatarMoods;
+import src.elementFactory.Mood;
+import src.elementFactory.Player;
+import src.elementFactory.avatarMoods;
 
 /**
- * Verarbeitet die Elemente aus dem {@link spriteLoader.FileReader} und stellt entsprechende Methoden bereit.
+ * Verarbeitet die Elemente aus dem {@link DataReader.FileReader} und stellt entsprechende Methoden bereit.
  * 
  * @author Jonas Schweizer
  *
@@ -24,12 +24,12 @@ public class SpriteLoader {
 	HashMap<String, Font> fonts;
 
 	Mood mMood;
-	FileReader mFileReader;
+	DataReader mFileReader;
 	private static SpriteLoader sInstance = null;
 
 	private SpriteLoader(String pImageFolder, String pAvatarName, int pMoodWidth, int pMoodHeight, int pMoodBuff) {
 		mMood = Mood.getInstance();
-		mFileReader = FileReader.getInstance(pImageFolder, pAvatarName);
+		mFileReader = DataReader.getInstance(pImageFolder, pAvatarName);
 //		mFileReader = FileReader.getInstance();
 
 		items = mFileReader.getItems();
