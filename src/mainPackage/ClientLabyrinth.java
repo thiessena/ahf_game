@@ -1,14 +1,14 @@
-package src.mainPackage;
+package mainPackage;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import src.elementFactory.Items;
-import src.elementFactory.Player;
-import src.graphicsDrawer.CorporateDesign;
-import src.graphicsDrawer.DialogDrawer;
-import src.graphicsDrawer.LabyrinthDrawer;
+import elementFactory.Items;
+import elementFactory.Player;
+import graphicsDrawer.CorporateDesign;
+import graphicsDrawer.DialogDrawer;
+import graphicsDrawer.LabyrinthDrawer;
 
 /**
  * Hauptfenster des AHF Simulators.

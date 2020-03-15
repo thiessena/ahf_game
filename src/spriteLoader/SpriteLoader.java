@@ -1,4 +1,4 @@
-package src.spriteLoader;
+package spriteLoader;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -8,12 +8,12 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-import src.elementFactory.Mood;
-import src.elementFactory.Player;
-import src.elementFactory.avatarMoods;
+import elementFactory.Mood;
+import elementFactory.Player;
+import elementFactory.avatarMoods;
 
 /**
- * Verarbeitet die Elemente aus dem {@link DataReader.FileReader} und stellt entsprechende Methoden bereit.
+ * Verarbeitet die Elemente aus dem {@link spriteLoader.DataReader} und stellt entsprechende Methoden bereit.
  * 
  * @author Jonas Schweizer
  *
@@ -24,16 +24,16 @@ public class SpriteLoader {
 	HashMap<String, Font> fonts;
 
 	Mood mMood;
-	DataReader mFileReader;
+	DataReader mDataReader;
 	private static SpriteLoader sInstance = null;
 
 	private SpriteLoader(String pImageFolder, String pAvatarName, int pMoodWidth, int pMoodHeight, int pMoodBuff) {
 		mMood = Mood.getInstance();
-		mFileReader = DataReader.getInstance(pImageFolder, pAvatarName);
+		mDataReader = DataReader.getInstance(pImageFolder, pAvatarName);
 //		mFileReader = FileReader.getInstance();
 
-		items = mFileReader.getItems();
-		fonts = mFileReader.getFonts();
+		items = mDataReader.getItems();
+		fonts = mDataReader.getFonts();
 		
 		avatars = new HashMap<avatarMoods, BufferedImage>();
 		loadAvatarMoods(pAvatarName, pMoodWidth, pMoodHeight, pMoodBuff);

@@ -1,4 +1,4 @@
-package src.clientServer;
+package clientServer;
 
 import java.net.ServerSocket;
 import java.net.Socket;

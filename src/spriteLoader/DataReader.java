@@ -1,4 +1,4 @@
-package src.spriteLoader;
+package spriteLoader;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 
-import src.graphicsDrawer.CorporateDesign;
+import graphicsDrawer.CorporateDesign;
 
 /**
  * Greift auf die Ordnerstruktur zu und importiert alle nötigen Elemente.
@@ -137,7 +137,7 @@ public class DataReader {
     }
     
     /**
-	 * Gibt eine Instanz des {@link DataReader.FileReader} zurück.
+	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurück.
 	 * <p>
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.
 	 * <p>
@@ -160,7 +160,7 @@ public class DataReader {
 	}
 	
 	/**
-	 * Gibt eine Instanz des {@link DataReader.FileReader} zurück. Wenn bereits eine Instanz dieser Klasse 
+	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurück. Wenn bereits eine Instanz dieser Klasse 
 	 * vorhanden ist, so wird die existierende Instanz zurückgegeben. Andernfalls wird eine neue
 	 * Instanz initialisiert.
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.

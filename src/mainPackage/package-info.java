@@ -6,4 +6,4 @@
  *@author Jonas Schweizer
  *@version 27.01.2020
  */
-package src.mainPackage;
+package mainPackage;

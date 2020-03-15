@@ -1,4 +1,4 @@
-package src.mainPackage;
+package mainPackage;
 
 /**
  * Richtungen, in die ein Player gehen kann.

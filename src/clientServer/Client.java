@@ -1,4 +1,4 @@
-package src.clientServer;
+package clientServer;
 
 /**
  * Ein Client kann über das Netz die Verbindung zu einem Server

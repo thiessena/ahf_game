@@ -1,4 +1,4 @@
-package src.mainPackage;
+package mainPackage;
 
 import java.awt.BorderLayout;
 import java.awt.Graphics;
@@ -16,8 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-import src.graphicsDrawer.CorporateDesign;
-import src.spriteLoader.DataReader;
+import graphicsDrawer.CorporateDesign;
+import spriteLoader.DataReader;
 /**
  * Erstellt ein leeres Fenster.
  * 

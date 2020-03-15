@@ -1,4 +1,4 @@
-package src.elementFactory;
+package elementFactory;
 
 public enum Items {
 	FLOOR(0),

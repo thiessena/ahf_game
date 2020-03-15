@@ -1,4 +1,4 @@
-package src.elementFactory;
+package elementFactory;
 
 /**
  * Moods und Bewegungen, die ein Player annehmen kann.

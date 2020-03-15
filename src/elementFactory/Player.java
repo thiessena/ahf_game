@@ -1,4 +1,4 @@
-package src.elementFactory;
+package elementFactory;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -8,10 +8,10 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import src.graphicsDrawer.CorporateDesign;
-import src.mainPackage.Labyrinth;
-import src.mainPackage.directions;
-import src.spriteLoader.SpriteLoader;
+import graphicsDrawer.CorporateDesign;
+import mainPackage.Labyrinth;
+import mainPackage.directions;
+import spriteLoader.SpriteLoader;
 
 /**
  * Write a description of class Player here.

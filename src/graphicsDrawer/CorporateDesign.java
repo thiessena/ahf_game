@@ -1,4 +1,4 @@
-package src.graphicsDrawer;
+package graphicsDrawer;
 
 import java.awt.Color;
 import java.util.HashMap;
