@@ -1,5 +1,5 @@
-package mainPackage;
-import clientServer.Server;
+package src.mainPackage;
+import src.clientServer.Server;
 
 /**
  * Sendet den Irrgarten und die Orte der Player an den EchoClient.

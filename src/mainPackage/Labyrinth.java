@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -14,8 +14,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import graphicsDrawer.CorporateDesign;
-import graphicsDrawer.LabyrinthDrawer;
+import src.graphicsDrawer.CorporateDesign;
+import src.graphicsDrawer.LabyrinthDrawer;
 
 /**
  * Write a description of class Labyrinth here.
@@ -87,7 +87,7 @@ public class Labyrinth extends Fenster {
 	
 	
 	public void preload(){
-		spriteLoader.DataReader mDataReader = spriteLoader.DataReader.getInstance("img/", "avatar");
+		src.spriteLoader.DataReader mDataReader = src.spriteLoader.DataReader.getInstance("img/", "avatar");
 		mDataReader.readFiles();
 		LabyrinthDrawer.getInstance();
 	}

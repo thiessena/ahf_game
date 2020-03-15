@@ -1,4 +1,4 @@
-package graphicsDrawer;
+package src.graphicsDrawer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -6,7 +6,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import spriteLoader.SpriteLoader;
+import src.spriteLoader.SpriteLoader;
 
 /**
  * Zeichnet den Irrgarten für das {@link mainPackage.ClientLabyrinth} und das {@link mainPackage.Labyrinth}.

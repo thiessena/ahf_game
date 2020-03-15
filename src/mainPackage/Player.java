@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -8,11 +8,11 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import elementFactory.ItemList;
-import elementFactory.Items;
-import elementFactory.avatarMoods;
-import graphicsDrawer.CorporateDesign;
-import spriteLoader.SpriteLoader;
+import src.elementFactory.ItemList;
+import src.elementFactory.Items;
+import src.elementFactory.avatarMoods;
+import src.graphicsDrawer.CorporateDesign;
+import src.spriteLoader.SpriteLoader;
 
 /**
  * Write a description of class Player here.

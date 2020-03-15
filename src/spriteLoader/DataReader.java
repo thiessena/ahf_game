@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 
-import graphicsDrawer.CorporateDesign;
+import src.graphicsDrawer.CorporateDesign;
 
 /**
  * Greift auf die Ordnerstruktur zu und importiert alle nötigen Elemente.

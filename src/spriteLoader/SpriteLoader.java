@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -8,9 +8,9 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-import elementFactory.Mood;
-import elementFactory.avatarMoods;
-import mainPackage.Player;
+import src.elementFactory.Mood;
+import src.elementFactory.avatarMoods;
+import src.mainPackage.Player;
 
 /**
  * Verarbeitet die Elemente aus dem {@link spriteLoader.DataReader} und stellt entsprechende Methoden bereit.

@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
