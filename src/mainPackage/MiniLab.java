@@ -7,7 +7,6 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import elementFactory.Player;
 import graphicsDrawer.LabyrinthDrawer;
 
 /**

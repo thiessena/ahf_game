@@ -49,7 +49,7 @@ public abstract class CorporateDesign {
 	public static final int MINI_MAP_SCALE = 10;
 	
 	/**
-	 * Größeneinheit des {@link elementFactory.Player} im {@link mainPackage.Labyrinth}. 
+	 * Größeneinheit des {@link mainPackage.Player} im {@link mainPackage.Labyrinth}. 
 	 * Ein Pixel entspricht einer Größeneinheit.
 	 */
 	public static final int PLAYER_SCALE = 30;

@@ -1,4 +1,4 @@
-package elementFactory;
+package mainPackage;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -8,9 +8,10 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import elementFactory.ItemList;
+import elementFactory.Items;
+import elementFactory.avatarMoods;
 import graphicsDrawer.CorporateDesign;
-import mainPackage.Labyrinth;
-import mainPackage.directions;
 import spriteLoader.SpriteLoader;
 
 /**

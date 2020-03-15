@@ -1,6 +1,5 @@
 package mainPackage;
 import clientServer.Server;
-import elementFactory.Player;
 
 /**
  * Sendet den Irrgarten und die Orte der Player an den EchoClient.

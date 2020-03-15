@@ -5,7 +5,6 @@ import java.awt.Color;
 import javax.swing.JTextField;
 
 import clientServer.Client;
-import elementFactory.Player;
 import graphicsDrawer.LabyrinthDrawer;
 
 /**

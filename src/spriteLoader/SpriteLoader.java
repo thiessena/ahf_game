@@ -9,8 +9,8 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 import elementFactory.Mood;
-import elementFactory.Player;
 import elementFactory.avatarMoods;
+import mainPackage.Player;
 
 /**
  * Verarbeitet die Elemente aus dem {@link spriteLoader.DataReader} und stellt entsprechende Methoden bereit.

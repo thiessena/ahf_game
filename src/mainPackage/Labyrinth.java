@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import elementFactory.Player;
 import graphicsDrawer.CorporateDesign;
 import graphicsDrawer.LabyrinthDrawer;
 

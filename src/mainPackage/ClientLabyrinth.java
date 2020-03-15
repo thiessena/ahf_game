@@ -5,7 +5,6 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
 import elementFactory.Items;
-import elementFactory.Player;
 import graphicsDrawer.CorporateDesign;
 import graphicsDrawer.DialogDrawer;
 import graphicsDrawer.LabyrinthDrawer;
@@ -46,7 +45,7 @@ public class ClientLabyrinth extends Fenster {
 	
 	/**
 	 * Array aller Player
-	 * @see elementFactory.Player
+	 * @see mainPackage.Player
 	 */
 	private Player[] mPlayer;
 	
