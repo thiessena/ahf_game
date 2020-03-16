@@ -125,7 +125,7 @@ public class GUIServer extends JFrame {
 		connectionPane.setLayout(new BoxLayout(connectionPane, BoxLayout.X_AXIS));
 
 		btnConnect = new JButton("mit Server verbinden");
-		btnConnect.setEnabled(false);
+		btnConnect.setEnabled(true);
 
 		// if(mState == serverState.disconnected)
 		// btnConnect.setEnabled(false);
@@ -210,7 +210,7 @@ public class GUIServer extends JFrame {
 
 	public void startServer(ActionEvent e) {
 		mEchoServer = new EchoServer(Integer.parseInt(fieldPort.getText()));
-		connectServer(e);
+		// connectServer(e);
 	}
 
 	public void connectServer(ActionEvent e) {

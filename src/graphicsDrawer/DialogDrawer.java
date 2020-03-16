@@ -55,7 +55,7 @@ public class DialogDrawer {
 	 */
 	public DialogDrawer(ClientLabyrinth pLabyrinth) {
 		cl = pLabyrinth;
-		sl = SpriteLoader.getInstance("img/");
+		sl = SpriteLoader.getInstance();
 
 		lWidth = (int) pLabyrinth.getWidth();
 		lHeight = (int) pLabyrinth.getHeight();

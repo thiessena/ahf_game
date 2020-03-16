@@ -10,12 +10,12 @@ import src.clientServer.Server;
  */
 
 public class EchoServer extends Server {
-    
-	/**
-	 * Member des Labyrinths
-	 * @see mainPackage.Labyrinth 
-	 */
-	private Labyrinth mLabyrinth;
+
+    /**
+     * Member des Labyrinths
+     * @see mainPackage.Labyrinth 
+     */
+    private Labyrinth mLabyrinth;
 
     /**
      * Initialisiert die Klasse Labyrinth als globale Member-Variable
@@ -44,19 +44,19 @@ public class EchoServer extends Server {
         String[] nachricht = pMessage.split(":");
         switch(nachricht[0]){
             case "S":
-                 this.send(pClientIP, pClientPort, mLabyrinth.toString());
-                 this.send(pClientIP, pClientPort, mLabyrinth.playerToString());
-                 break;
+            this.send(pClientIP, pClientPort, mLabyrinth.toString());
+            this.send(pClientIP, pClientPort, mLabyrinth.playerToString());
+            break;
             case "WHO":
-                 this.send(pClientIP, pClientPort, "YOU:" + mLabyrinth.getPlayerPos(pClientIP, pClientPort));
-                 break;
+            this.send(pClientIP, pClientPort, "YOU:" + mLabyrinth.getPlayerPos(pClientIP, pClientPort));
+            break;
             default:
-             int z = Integer.parseInt(pMessage);
-             Player p = mLabyrinth.getPlayer(pClientIP, pClientPort);
-             if(p != null){
-                 p.move(z);   
-             }
-             this.sendToAll(mLabyrinth.playerToString());
+            int z = Integer.parseInt(pMessage);
+            Player p = mLabyrinth.getPlayer(pClientIP, pClientPort);
+            if(p != null){
+                p.move(z);   
+            }
+            this.sendToAll(mLabyrinth.playerToString());
         }
     }
 

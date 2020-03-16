@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 import src.elementFactory.Mood;
 import src.elementFactory.avatarMoods;
-import src.mainPackage.Player;
+import src.graphicsDrawer.CorporateDesign;
 
 /**
  * Verarbeitet die Elemente aus dem {@link spriteLoader.DataReader} und stellt entsprechende Methoden bereit.
@@ -27,38 +27,22 @@ public class SpriteLoader {
 	DataReader mDataReader;
 	private static SpriteLoader sInstance = null;
 
-	private SpriteLoader(String pImageFolder, String pAvatarName, int pMoodWidth, int pMoodHeight, int pMoodBuff) {
+	private SpriteLoader() {
 		mMood = Mood.getInstance();
-		mDataReader = DataReader.getInstance(pImageFolder, pAvatarName);
+		mDataReader = DataReader.getInstance(CorporateDesign.IMAGE_FOLDER, CorporateDesign.getAvatarName());
 //		mFileReader = FileReader.getInstance();
 
 		items = mDataReader.getItems();
 		fonts = mDataReader.getFonts();
 		
 		avatars = new HashMap<avatarMoods, BufferedImage>();
-		loadAvatarMoods(pAvatarName, pMoodWidth, pMoodHeight, pMoodBuff);
+		loadAvatarMoods(CorporateDesign.getAvatarName(), CorporateDesign.getMoodWidth(), CorporateDesign.getMoodHeight(), CorporateDesign.getMoodBuff());
 	}
-	
+
 	public static SpriteLoader getInstance() {
-		return getInstance("img/", "avatar", 96, 143, 0);
-	}
-
-	public static SpriteLoader getInstance(String pImageFolder) {
-		Player pl = new Player();
-
 		if (sInstance == null) {
-			sInstance = new SpriteLoader(pImageFolder, pl.getName(), pl.getMoodWidth(), pl.getMoodHeight(), pl.getMoodBuff());
+			sInstance = new SpriteLoader();
 		}
-
-		return sInstance;
-	}
-
-	public static SpriteLoader getInstance(String pImageFolder, String pAvatarName, int pMoodWidth, int pMoodHeight,
-			int pMoodBuff) {
-		if (sInstance == null) {
-			sInstance = new SpriteLoader(pImageFolder, pAvatarName, pMoodWidth, pMoodHeight, pMoodBuff);
-		}
-
 		return sInstance;
 	}
 	
