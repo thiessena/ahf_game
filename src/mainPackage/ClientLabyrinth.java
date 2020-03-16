@@ -100,16 +100,16 @@ public class ClientLabyrinth extends Fenster {
     public ClientLabyrinth(EchoClient pC) {
         mEchoClient = pC;
 
-        this.setTitle("AHF Simulator");
-        this.setSize(15 * mScale, 10 * mScale);
-        this.setResizable(false);
-        this.setLocationRelativeTo(null);
-
         mLabWidth = (int) (this.getWidth() - 0.2 * this.getWidth());
         mLabHeight = (int) (this.getHeight() - 0.2 * this.getHeight());
 
         mLabyrinthDrawer = LabyrinthDrawer.getInstance(mLabyrinth, mScale);
         mDialogDrawer = new DialogDrawer(this);
+        
+        this.setTitle("AHF Simulator");
+        this.setSize(15 * mScale, 10 * mScale);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -120,8 +120,8 @@ public class ClientLabyrinth extends Fenster {
     public void draw(Graphics g) {
         if (mPlayer != null && mLabyrinth != null && mImageLab != null) {
 
-            newX = -mPlayer[0].getX() * mScale + mLabWidth / 2;
-            newY = -mPlayer[0].getY() * mScale + mLabHeight / 2;
+            newX = -mPlayer[aktPlayer].getX() * mScale + mLabWidth / 2;
+            newY = -mPlayer[aktPlayer].getY() * mScale + mLabHeight / 2;
 
             g.drawImage(mImageLab, newX, newY, null);
 
@@ -176,8 +176,8 @@ public class ClientLabyrinth extends Fenster {
      */
     private void drawPlayer(Graphics g, GraphicsPlayer[] player) {
         for (int i = 0; i < player.length; i++) {
-            player[i].drawClient(g, (player[i].getX() - player[0].getX()) * mScale + mLabWidth / 2,
-                (player[i].getY() - player[0].getY()) * mScale + mLabHeight / 2);
+            player[i].drawClient(g, (player[i].getX() - player[aktPlayer].getX()) * mScale + mLabWidth / 2,
+                (player[i].getY() - player[aktPlayer].getY()) * mScale + mLabHeight / 2);
         }
     }
 
