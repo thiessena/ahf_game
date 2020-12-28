@@ -1,4 +1,4 @@
-package src.mainPackage;
+package mainPackage;
 
 import java.awt.BorderLayout;
 import java.awt.Graphics;
@@ -16,8 +16,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
-import src.graphicsDrawer.CorporateDesign;
-import src.spriteLoader.DataReader;
+import graphicsDrawer.CorporateDesign;
+import spriteLoader.DataReader;
 /**
  * Erstellt ein leeres Fenster.
  * 
@@ -26,6 +26,10 @@ import src.spriteLoader.DataReader;
  */
 public class Fenster extends JFrame implements ActionListener, KeyListener
 { 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     JPanel zeichenfeld;
     Timer timer;
     boolean animationLaeuft;
@@ -99,7 +103,7 @@ public class Fenster extends JFrame implements ActionListener, KeyListener
     }
     
     /**
-     * Gibt die Bildwiederholrate zurück
+     * Gibt die Bildwiederholrate zurï¿½ck
      * 
      * @return Bildwiederholrate
      */
@@ -110,7 +114,7 @@ public class Fenster extends JFrame implements ActionListener, KeyListener
     /**
      * Obligatorische Methode zum Zeichnen von Elementen. 
      * Wird von den Unterklassen {@link mainPackage.ClientLabyrinth} 
-     * und {@link mainPackage.Labyrinth} überschrieben.
+     * und {@link mainPackage.Labyrinth} ï¿½berschrieben.
      * 
      * @param g Graphics, auf dem gezeichnet werden soll. Wird im Konstruktor gesetzt.
      */

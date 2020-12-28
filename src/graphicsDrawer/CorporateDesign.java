@@ -1,10 +1,10 @@
-package src.graphicsDrawer;
+package graphicsDrawer;
 
 import java.awt.Color;
 import java.util.HashMap;
 
 /**
- * Definiert Farben gemäß des Corporates Design des 
+ * Definiert Farben gemÃ¤ÃŸ des Corporates Design des 
  * <a href="https://schultraeger.csv-lippe.de/">Christlichen Schulvereins e.V.</a> 
  * und weitere vereinheitlichte Konstanten im AHFSimulator.
  * 
@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 public abstract class CorporateDesign {
     /**
-     * Farbe Grün im Corporate Design des 
+     * Farbe GrÃ¼n im Corporate Design des 
      * <a href="https://schultraeger.csv-lippe.de/">Christlichen Schulvereins e.V.</a>
      */
     public static final Color AHF_GREEN = new Color(200, 210, 16);
@@ -37,20 +37,20 @@ public abstract class CorporateDesign {
     public static final Color FONT_COLOR = new Color(15, 15, 15);
     
     /**
-     * Größeneinheit des {@link mainPackage.ClientLabyrinth}. 
-     * Ein Pixel entspricht einer Größeneinheit.
+     * Grï¿½ï¿½eneinheit des {@link mainPackage.ClientLabyrinth}. 
+     * Ein Pixel entspricht einer Grï¿½ï¿½eneinheit.
      */
     public static final int CLIENT_SCALE = 40;
     
     /**
-     * Größeneinheit des {@link mainPackage.Labyrinth}. 
-     * Ein Pixel entspricht einer Größeneinheit.
+     * Grï¿½ï¿½eneinheit des {@link mainPackage.Labyrinth}. 
+     * Ein Pixel entspricht einer Grï¿½ï¿½eneinheit.
      */
     public static final int MINI_MAP_SCALE = 10;
     
     /**
-     * Größeneinheit des {@link mainPackage.Player} im {@link mainPackage.Labyrinth}. 
-     * Ein Pixel entspricht einer Größeneinheit.
+     * Grï¿½ï¿½eneinheit des {@link mainPackage.Player} im {@link mainPackage.Labyrinth}. 
+     * Ein Pixel entspricht einer Grï¿½ï¿½eneinheit.
      */
     public static final int PLAYER_SCALE = 30;
     
@@ -67,16 +67,16 @@ public abstract class CorporateDesign {
     
     static {
         colorMap = new HashMap<String, Color>();
-        colorMap.put("Grün", AHF_GREEN);
+        colorMap.put("Grï¿½n", AHF_GREEN);
         colorMap.put("Rot", AHF_RED);
         colorMap.put("Blau", AHF_BLUE);
         colorMap.put("Grau", FONT_COLOR);
     }
     
     /**
-     * Gibt die gewünschte Farbe als {@link java.awt.Color} zurück.
+     * Gibt die gewï¿½nschte Farbe als {@link java.awt.Color} zurï¿½ck.
      * 
-     * @param pColor Text-String der gewünschten Farbe in der Form "Grün".
+     * @param pColor Text-String der gewï¿½nschten Farbe in der Form "Grï¿½n".
      * @return entsprechende Farbe in der {@link #colorMap}
      */
     public static Color getColor(String pColor) {
@@ -84,7 +84,7 @@ public abstract class CorporateDesign {
     }
 
     /**
-     * Gibt eine HashMap mit allen hier definierten Farben zurück.
+     * Gibt eine HashMap mit allen hier definierten Farben zurï¿½ck.
      * @return colorMap
      */
     public static HashMap<String, Color> getColorMap() {
@@ -92,7 +92,7 @@ public abstract class CorporateDesign {
     }
 
     /**
-     * Gibt die Farbe ahfGrün zurück.
+     * Gibt die Farbe ahfGrï¿½n zurï¿½ck.
      * @return ahfGreen
      */
     public static Color getAHFGreen() {
@@ -100,7 +100,7 @@ public abstract class CorporateDesign {
     }
 
     /**
-     * Gibt die Farbe ahfRot zurück.
+     * Gibt die Farbe ahfRot zurï¿½ck.
      * @return ahfRed
      */
     public static Color getAHFRed() {
@@ -108,7 +108,7 @@ public abstract class CorporateDesign {
     }
 
     /**
-     * Gibt die Farbe ahfBlau zurück.
+     * Gibt die Farbe ahfBlau zurï¿½ck.
      * @return ahfBlue
      */
     public static Color getAHFBlue() {
@@ -116,7 +116,7 @@ public abstract class CorporateDesign {
     }
 
     /**
-     * Gibt die Schriftfarbe zurück.
+     * Gibt die Schriftfarbe zurï¿½ck.
      * @return fontColor
      */
     public static Color getFontColor() {

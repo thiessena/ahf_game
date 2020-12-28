@@ -1,18 +1,18 @@
-package src.mainPackage;
+package mainPackage;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 
-import src.elementFactory.Items;
-import src.graphicsDrawer.CorporateDesign;
-import src.graphicsDrawer.DialogDrawer;
-import src.graphicsDrawer.LabyrinthDrawer;
+import elementFactory.Items;
+import graphicsDrawer.CorporateDesign;
+import graphicsDrawer.DialogDrawer;
+import graphicsDrawer.LabyrinthDrawer;
 
 /**
  * Hauptfenster des AHF Simulators.
  * <p>
- * Das ClientLabyrinth erbt von der Klasse Fenster und öffnet das Hauptfenster,
+ * Das ClientLabyrinth erbt von der Klasse Fenster und Ã¶ffnet das Hauptfenster,
  * in welchem der aktuelle Spieler den AHFSimulator spielen kann.
  * 
  * @author Andreas Thiessen
@@ -20,6 +20,11 @@ import src.graphicsDrawer.LabyrinthDrawer;
  * @version 27.01.2020
  */
 public class ClientLabyrinth extends Fenster {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
     /**
      * Array des Irrgartens
      */
@@ -31,7 +36,7 @@ public class ClientLabyrinth extends Fenster {
     private BufferedImage mImageLab = null;
 
     /**
-     * Scalewert / Größeneinheit des ClientLabyrinths (<code>1 px = 1 scl</code>) 
+     * Scalewert / GrÃ¶ÃŸeneinheit des ClientLabyrinths (<code>1 px = 1 scl</code>) 
      * @see graphicsDrawer.CorporateDesign#CLIENT_SCALE
      * @see #getScale()
      * @see #setScale(int)
@@ -68,12 +73,12 @@ public class ClientLabyrinth extends Fenster {
     private DialogDrawer mDialogDrawer;
 
     /**
-     * <code>x</code>-Koordinate des aktuellen Players, versetzt um die Hälfte der Fenstergröße.
+     * <code>x</code>-Koordinate des aktuellen Players, versetzt um die HÃ¤lfte der FenstergrÃ¶ÃŸe.
      */
     private int newX = 0;
 
     /**
-     * <code>y</code>-Koordinate des aktuellen Players, versetzt um die Hälfte der Fenstergröße.
+     * <code>y</code>-Koordinate des aktuellen Players, versetzt um die HÃ¤lfte der FenstergrÃ¶ÃŸe.
      */
     private int newY = 0;
 
@@ -83,17 +88,17 @@ public class ClientLabyrinth extends Fenster {
     private int mLabWidth = 0;
 
     /**
-     * Höhe des ClientLabyrinths (<code>80%</code> der Gesamthöhe)
+     * HÃ¶he des ClientLabyrinths (<code>80%</code> der GesamthÃ¶he)
      */
     private int mLabHeight = 0;
 
     /**
-     * Wahrheitswert, ob aktuell ein Dialogfenster geöffnet ist.
+     * Wahrheitswert, ob aktuell ein Dialogfenster geï¿½ffnet ist.
      */
     private boolean isDialogActive = false;
 
     /**
-     * Konstruktor des ClientLabyrinths legt die Größe des Fensters fest.
+     * Konstruktor des ClientLabyrinths legt die GrÃ¶ÃŸe des Fensters fest.
      * 
      * @param pC Der EchoClient, von dem aus das Labyrinth und die Player gesendet werden
      */
@@ -114,7 +119,7 @@ public class ClientLabyrinth extends Fenster {
 
     /**
      * Aktualisiert den Irrgarten und bewegt diesen mit dem aktuellen Player mit.
-     * Die Methode prüft außerdem, ob der aktuelle Player auf einem Item steht
+     * Die Methode prï¿½ft auï¿½erdem, ob der aktuelle Player auf einem Item steht
      * und handelt dementsprechend.
      */
     public void draw(Graphics g) {
@@ -128,21 +133,21 @@ public class ClientLabyrinth extends Fenster {
             drawPlayer(g, mPlayer);
 
             if (isDialogActive && getItemAtPlace() != null) {
-                mDialogDrawer.drawItemDialog(g, Items.toString(getItemAtPlace()), "Ein Schlüssel am Platz!");
+                mDialogDrawer.drawItemDialog(g, Items.toString(getItemAtPlace()), "Ein Schlï¿½ssel am Platz!");
             }
 
             //			if (getAktPlayer().itemAtPlace(items.KEY)) {
-            ////				String text = "Öffne im A-Gebäude den Safe und sichere die geheimen Unterlagen!";
-            ////				mDialogDrawer.drawItemDialog(g, "Schlüssel", text);
+            ////				String text = "ï¿½ffne im A-Gebï¿½ude den Safe und sichere die geheimen Unterlagen!";
+            ////				mDialogDrawer.drawItemDialog(g, "Schlï¿½ssel", text);
             ////				removeItem();
             //				
             //			} else if (getAktPlayer().itemAtPlace(items.BUCKET)) {
-            //				String text = "Begib dich ins N-Gebäude und putze alle Toiletten!";
+            //				String text = "Begib dich ins N-Gebï¿½ude und putze alle Toiletten!";
             ////				mDialogDrawer.drawItemDialog(g, "Putzeimer", text);
             //				removeItem();
             //				
             //			} else if (getAktPlayer().itemAtPlace(items.BRUSH)) {
-            //				String text = "Suche dir einen zweiten Mitspieler und bemalt zusammen im Kunstraum die weißen Wände!";
+            //				String text = "Suche dir einen zweiten Mitspieler und bemalt zusammen im Kunstraum die weiï¿½en Wï¿½nde!";
             //				mDialogDrawer.drawItemDialog(g, "Pinsel", text);
             //				
             //			} else if (getAktPlayer().itemAtPlace(items.CALCULATOR)) {
@@ -155,7 +160,7 @@ public class ClientLabyrinth extends Fenster {
     /**
      * Entfernt das Item, auf dem der aktuelle Player steht.
      * <p>Der Irrgarten {@link mLabyrinth} wird an dieser Stelle, wo der aktuelle Player gerade steht, 
-     * auf 0 zurückgesetzt und das Labyrinth wird neu gezeichnet.
+     * auf 0 zurï¿½ckgesetzt und das Labyrinth wird neu gezeichnet.
      */
     private void removeItem() {
         mLabyrinth[getAktPlayer().getY()][getAktPlayer().getX()] = 0;
@@ -182,7 +187,7 @@ public class ClientLabyrinth extends Fenster {
     }
 
     /**
-     * Gibt die Größeneinheit des ClientLabyrinths zurück
+     * Gibt die Grï¿½ï¿½eneinheit des ClientLabyrinths zurï¿½ck
      * 
      * @return Scalewert des ClientLabyrinths
      * @see #setScale(int)
@@ -217,7 +222,7 @@ public class ClientLabyrinth extends Fenster {
      * <p>
      * So muss nicht jedes Mal bei einem Refresh der draw-Methode das Labyrinth neu gezeichnet werden.
      * 
-     * @param pImageLab BufferedImage, welches das aktuelle Bild des Irrgartens enthält
+     * @param pImageLab BufferedImage, welches das aktuelle Bild des Irrgartens enthï¿½lt
      */
     public void setImageLab(BufferedImage pImageLab) {
         mImageLab = pImageLab;
@@ -233,7 +238,7 @@ public class ClientLabyrinth extends Fenster {
     }
 
     /**
-     * Gibt den Irrgarten zurück
+     * Gibt den Irrgarten zurï¿½ck
      * 
      * @return Multidimensionaler Array mit dem Irrgarten
      */
@@ -251,7 +256,7 @@ public class ClientLabyrinth extends Fenster {
     }
 
     /**
-     * Gibt den aktuellen Player zurück, mit dem der Client spielt.
+     * Gibt den aktuellen Player zurï¿½ck, mit dem der Client spielt.
      * 
      * @return aktueller Player, wenn vorhanden. 
      * @return null, wenn {@link #aktPlayer} kleiner als 0 ist.
@@ -264,9 +269,9 @@ public class ClientLabyrinth extends Fenster {
     }
 
     /**
-     * Führt Aktionen aus, wenn ein Player auf einem Item steht und, wenn bestimmte Tasten gedrückt wurden.
+     * Fï¿½hrt Aktionen aus, wenn ein Player auf einem Item steht und, wenn bestimmte Tasten gedrï¿½ckt wurden.
      * <p>
-     * Die Methode wird in {@link #keyPressed(KeyEvent)} aufgerufen und erhält von dort auch das {@link KeyEvent}.
+     * Die Methode wird in {@link #keyPressed(KeyEvent)} aufgerufen und erhï¿½lt von dort auch das {@link KeyEvent}.
      * <p>
      * Tastenbelegung und entsprechende Aktionen:
      * <blockquote><table border=1 cellpadding=4 cellspacing=0 summary="Tastaturbelegung und entsprechende Aktionen:">
@@ -293,12 +298,12 @@ public class ClientLabyrinth extends Fenster {
      * </tr>
      * <tr>
      *    <td align="center"><code>ESC</code></td>
-     *    <td>Dialog schließen</td>
+     *    <td>Dialog schlieï¿½en</td>
      * </tr>
      * </table>
      * </blockquote>
      * 
-     * @param e KeyEvent, welches die Tastenanschläge übergibt. 
+     * @param e KeyEvent, welches die Tastenanschlï¿½ge ï¿½bergibt. 
      * 			Wird in der Methode {@link #keyPressed(KeyEvent)} aufgerufen.
      * 
      * @see #keyPressed(KeyEvent)
@@ -320,19 +325,19 @@ public class ClientLabyrinth extends Fenster {
     }
 
     /**
-     * Prüft, welche Taste gedrückt wurde und sendet eine entsprechende Meldung an
+     * Prï¿½ft, welche Taste gedrï¿½ckt wurde und sendet eine entsprechende Meldung an
      * den EchoServer. 
      * <p>
-     * Bezieht sich hauptsächlich auf die Bewegung des aktuellen Players.
+     * Bezieht sich hauptsï¿½chlich auf die Bewegung des aktuellen Players.
      * 
-     * @param e KeyEvent, welches die Tastenanschläge übergibt. 
+     * @param e KeyEvent, welches die Tastenanschlï¿½ge ï¿½bergibt. 
      * 
      * @see mainPackage.EchoServer
      * @see mainPackage.EchoClient
      */
     public void keyPressed(KeyEvent e) {
         // System.out.println(e.getKeyCode());
-        Player p = getAktPlayer();
+        //Player p = getAktPlayer();
         interact(e);
         switch (e.getKeyCode()) {
             case KeyEvent.VK_LEFT:

@@ -1,4 +1,4 @@
-package src.elementFactory;
+package elementFactory;
 
 /**
  * Erstellt einen Array mit den {@link elementFactory.avatarMoods}
@@ -20,7 +20,7 @@ public class Mood {
     private static Mood sInstance = null;
 
     /**
-     * Füllt den {@link moodArray} mit den Moods, die ein Avatar annehmen kann
+     * Fï¿½llt den {@link moodArray} mit den Moods, die ein Avatar annehmen kann
      * @see elementFactory.avatarMoods
      */
     private Mood() {
@@ -48,7 +48,7 @@ public class Mood {
     }
 
     /**
-     * Gibt die Instanz dieser Klasse zurück.
+     * Gibt die Instanz dieser Klasse zurï¿½ck.
      * 
      * @return Instanz dieser Klasse
      */
@@ -61,10 +61,10 @@ public class Mood {
     }
     
     /**
-     * Gibt den Mood an einer bestimmten Stelle im Array zurück
+     * Gibt den Mood an einer bestimmten Stelle im Array zurï¿½ck
      * 
-     * @param x <code>x</code>-Koordinate des zurückzugebenen Moods
-     * @param y <code>y</code>-Koordinate des zurückzugebenen Moods
+     * @param x <code>x</code>-Koordinate des zurï¿½ckzugebenen Moods
+     * @param y <code>y</code>-Koordinate des zurï¿½ckzugebenen Moods
      * @return Mood der angegebenen Stelle im Array
      */
     public avatarMoods getMood(int x, int y) {

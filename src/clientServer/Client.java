@@ -1,10 +1,10 @@
-package src.clientServer;
+package clientServer;
 
 /**
- * Ein Client kann über das Netz die Verbindung zu einem Server
+ * Ein Client kann Ã¼ber das Netz die Verbindung zu einem Server
  * herstellen.<br>
  * Fehlermeldungen werden ausgegeben.<br>
- * Die Eingaben werden nebenläufig verarbeitet.
+ * Die Eingaben werden nebenlÃ¤ufig verarbeitet.
  * 
  * @author Horst Hildebrecht
  * @version 1.0 vom 16.08.2006
@@ -16,7 +16,7 @@ public abstract class Client {
 	private Clientempfaenger hatEmpfaenger;
 
 	/**
-	 * Hilfsklasse für den Client, die in einem eigenen Thread den Empfang einer
+	 * Hilfsklasse fï¿½r den Client, die in einem eigenen Thread den Empfang einer
 	 * Nachricht vom Server realisiert.
 	 * 
 	 * @author Horst Hildebrecht
@@ -31,13 +31,13 @@ public abstract class Client {
 		private boolean zVerbindungAktiv;
 
 		/**
-		 * Der ClientEmpfaenger hat den zugehörigen Client und die zugehörige
+		 * Der ClientEmpfaenger hat den zugehï¿½rigen Client und die zugehï¿½rige
 		 * Connection kennen gelernt.<br>
 		 * 
-		 * @param pClient     zugehöriger Client, der die einkommenden Nachrichten
+		 * @param pClient     zugehï¿½riger Client, der die einkommenden Nachrichten
 		 *                    bearbeitet
-		 * @param pConnection zugehörige Connection, die die einkommenden
-		 *                    Nachrichten empfängt
+		 * @param pConnection zugehï¿½rige Connection, die die einkommenden
+		 *                    Nachrichten empfï¿½ngt
 		 */
 		public Clientempfaenger(Client pClient, Connection pConnection) {
 			kenntClient = pClient;
@@ -102,7 +102,7 @@ public abstract class Client {
 
 	/**
 	 * Eine Nachricht vom Server wurde bearbeitet.<br>
-	 * Diese abstrakte Methode muss in Unterklassen überschrieben werden.
+	 * Diese abstrakte Methode muss in Unterklassen ï¿½berschrieben werden.
 	 * 
 	 * @param pNachricht die empfangene Nachricht, die bearbeitet werden soll
 	 */

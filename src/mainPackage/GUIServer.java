@@ -1,4 +1,4 @@
-package src.mainPackage;
+package mainPackage;
 
 import java.awt.BorderLayout;
 import java.awt.Component;

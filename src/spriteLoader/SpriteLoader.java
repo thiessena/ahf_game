@@ -1,4 +1,4 @@
-package src.spriteLoader;
+package spriteLoader;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -8,9 +8,9 @@ import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
-import src.elementFactory.Mood;
-import src.elementFactory.avatarMoods;
-import src.graphicsDrawer.CorporateDesign;
+import elementFactory.Mood;
+import elementFactory.avatarMoods;
+import graphicsDrawer.CorporateDesign;
 
 /**
  * Verarbeitet die Elemente aus dem {@link spriteLoader.DataReader} und stellt entsprechende Methoden bereit.
@@ -142,9 +142,9 @@ public class SpriteLoader {
 	/**
 	 * Konvertiert ein {@link java.awt.Image} in ein {@link java.awt.Image.BufferedImage}.
 	 * 
-	 * @deprecated Die Methode wird aufgrund einer Codeaufbereitung nicht mehr benötigt. 
+	 * @deprecated Die Methode wird aufgrund einer Codeaufbereitung nicht mehr benï¿½tigt. 
 	 * 			   Vorher wurde mit Images anstatt mit BufferedImages gearbeitet.
-	 * 			   Es ist also keine Umstellung nötig, da alle Methoden nun mit BufferedImages arbeiten.
+	 * 			   Es ist also keine Umstellung nï¿½tig, da alle Methoden nun mit BufferedImages arbeiten.
 	 * @param img  Bild als Image, das in ein BufferedImage konvertiert werden soll.
 	 * @return BufferedImage, des zu konvertierenden Bildes.
 	 */

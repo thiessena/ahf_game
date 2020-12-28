@@ -1,4 +1,4 @@
-package src.graphicsDrawer;
+package graphicsDrawer;
 
 public class PlayerDrawer {
 
