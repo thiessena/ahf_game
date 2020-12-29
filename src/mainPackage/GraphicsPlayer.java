@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -8,15 +8,15 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import elementFactory.ItemList;
-import elementFactory.Items;
-import elementFactory.avatarMoods;
-import graphicsDrawer.CorporateDesign;
-import spriteLoader.SpriteLoader;
+import src.elementFactory.ItemList;
+import src.elementFactory.Items;
+import src.elementFactory.avatarMoods;
+import src.graphicsDrawer.CorporateDesign;
+import src.spriteLoader.SpriteLoader;
 
 /**
  * Erbt vom {@link mainPackage.Player} die grundlegenden Parameter(Position, IP, Port, etc).
- * Enthï¿½lt alle nï¿½tigen Methoden zum Zeichnen des Players, in den Labyrinthen.
+ * Enthält alle nötigen Methoden zum Zeichnen des Players, in den Labyrinthen.
  * @author Simon Penner
  * @author Jonas Schweizer
  * @version 02.03.2020
@@ -194,7 +194,7 @@ public class GraphicsPlayer extends Player
     /**
      *         // #1: y-Koordinate
     // #2: Rotanteil
-    // #3: Grï¿½nanteil
+    // #3: Grünanteil
     // #4: Blauanteil
     // #5: Radius
     // #6: ClientIP
@@ -205,7 +205,7 @@ public class GraphicsPlayer extends Player
         return pString += x + "," +                 // #0: x-Koordinate
         y + "," +                                   // #1: y-Koordinate
         farbe.getRed() + "," +                      // #2: Rotanteil
-        farbe.getGreen() + "," +                    // #3: Grï¿½nanteil
+        farbe.getGreen() + "," +                    // #3: Grünanteil
         farbe.getBlue() + "," +                     // #4: Blauanteil
         radius + "," +                              // #5: Radius
         clientIP + "," +                            // #6: ClientIP

@@ -1,4 +1,4 @@
-package clientServer;
+package src.clientServer;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -6,9 +6,9 @@ import java.net.Socket;
 /**
  * Ein Server ist ein vereinfachter ServerSocket, der zus&auml;tzliche
  * Funktionen hat.<br>
- * Es können beliebig viele Kontakte mit Clientverbindungen aufgebaut
+ * Es k&ouml;nnen beliebig viele Kontakte mit Clientverbindungen aufgebaut
  * werden.<br>
- * Der Dialog mit den Clients wird nebenläufig realisiert.
+ * Der Dialog mit den Clients wird nebenl&auml;ufig realisiert.
  * 
  * @author Horst Hildebrecht
  * @version 1.0 vom 16.08.06

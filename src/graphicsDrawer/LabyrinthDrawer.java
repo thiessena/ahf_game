@@ -1,4 +1,4 @@
-package graphicsDrawer;
+package src.graphicsDrawer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -6,10 +6,10 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import spriteLoader.SpriteLoader;
+import src.spriteLoader.SpriteLoader;
 
 /**
- * Zeichnet den Irrgarten fÃ¼r das {@link mainPackage.ClientLabyrinth} und das {@link mainPackage.Labyrinth}.
+ * Zeichnet den Irrgarten für das {@link mainPackage.ClientLabyrinth} und das {@link mainPackage.Labyrinth}.
  * 
  * @author Jonas Schweizer
  * @version 02.02.2020
@@ -80,7 +80,7 @@ public class LabyrinthDrawer {
                         drawImageObstacle(g, newX, newY, scl);
                         break;
                         case 2:
-                        drawImageItem(g, "SchlÃ¼ssel", newX, newY, scl);
+                        drawImageItem(g, "Schlüssel", newX, newY, scl);
                         break;
                         case 3:
                         drawImageItem(g, "Putzeimer", newX, newY, scl);

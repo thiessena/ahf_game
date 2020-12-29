@@ -1,13 +1,13 @@
-package mainPackage;
+package src.mainPackage;
 
 import java.awt.Color;
 
 import javax.swing.JTextField;
 
-import clientServer.Client;
-import graphicsDrawer.LabyrinthDrawer;
+import src.clientServer.Client;
+import src.graphicsDrawer.LabyrinthDrawer;
 
-import elementFactory.avatarMoods;
+import src.elementFactory.avatarMoods;
 
 /**
  * Aktualisiert die Elemente im ClientLabyrinth.

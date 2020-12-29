@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -6,9 +6,9 @@ import java.awt.image.BufferedImage;
 import java.awt.RenderingHints;
 import java.util.HashMap;
 
-import elementFactory.Mood;
-import elementFactory.avatarMoods;
-import mainPackage.*;
+import src.elementFactory.Mood;
+import src.elementFactory.avatarMoods;
+import src.mainPackage.*;
 
 public class SpriteLoaderWindow extends Fenster {
 

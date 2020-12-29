@@ -1,4 +1,4 @@
-package spriteLoader;
+package src.spriteLoader;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
@@ -13,12 +13,12 @@ import java.util.HashMap;
 
 import javax.imageio.ImageIO;
 
-import graphicsDrawer.CorporateDesign;
+import src.graphicsDrawer.CorporateDesign;
 
 /**
- * Greift auf die Ordnerstruktur zu und importiert alle nï¿½tigen Elemente.
+ * Greift auf die Ordnerstruktur zu und importiert alle nötigen Elemente.
  * Sowohl Bilder bzw. Grafiken als auch Schriftarten werden geladen und in separaten HashMaps abgelegt.
- * Sofern ein Bild keinen Avatar enthï¿½lt, werden diese schon skaliert, um die Performance zu steigern.
+ * Sofern ein Bild keinen Avatar enthält, werden diese schon skaliert, um die Performance zu steigern.
  * 
  * @author Jonas Schweizer
  * @version 27.01.2020
@@ -27,9 +27,9 @@ import graphicsDrawer.CorporateDesign;
 public class DataReader {
 	
 	/**
-	 * Scalewert / Grï¿½ï¿½eneinheit des ClientLabyrinths (<code>1 px = 1 scl</code>).
+	 * Scalewert / Größeneinheit des ClientLabyrinths (<code>1 px = 1 scl</code>).
 	 * <p>
-	 * Auf diese maximale Grï¿½ï¿½e werden alle Items auï¿½er dem Avatar herunterskaliert ({@link #readFiles()}), 
+	 * Auf diese maximale Größe werden alle Items außer dem Avatar herunterskaliert ({@link #readFiles()}), 
 	 * um die Performance zu steigern.
 	 * 
 	 * @see graphicsDrawer.CorporateDesign#CLIENT_SCALE
@@ -98,15 +98,15 @@ public class DataReader {
     
     /**
      * Initialisiert die Member-Variablen und liest die Dateien aus den definierten Ordnern.
-     * Ein Aufruf des Konstruktors ist nur ï¿½ber die Methoden {@link #getInstance(String, String)}
-     * und {@link #getInstance(String, String, String, String[], String[])} mï¿½glich, um sicherzustellen,
+     * Ein Aufruf des Konstruktors ist nur über die Methoden {@link #getInstance(String, String)}
+     * und {@link #getInstance(String, String, String, String[], String[])} möglich, um sicherzustellen,
      * dass nur eine Instanz des FileReaders existiert.
      * 
 	 * @param pImageFolder		Ordner als String, aus dem die Bilder und Items importiert werden sollen.
 	 * @param pFontFolder		Ordner als String, aus dem die Schriften importiert werden sollen.
 	 * @param pAvatarName		Name als String des Avatars, der als Spielfigur dient.
-	 * @param pImageExtensions	Array mit den Bilddateiendungen, die zu berï¿½cksichtigen sind.
-	 * @param pFontExtensions	Array mit den Schriftdateiendungen, die zu berï¿½cksichtigen sind.
+	 * @param pImageExtensions	Array mit den Bilddateiendungen, die zu berücksichtigen sind.
+	 * @param pFontExtensions	Array mit den Schriftdateiendungen, die zu berücksichtigen sind.
 	 * 
 	 * @see #readFiles()
      */
@@ -137,17 +137,17 @@ public class DataReader {
     }
     
     /**
-	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurï¿½ck.
+	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurück.
 	 * <p>
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.
 	 * <p>
-	 * Die ï¿½brigen Parameter werden in dieser Methode standardmï¿½ï¿½ig in dieser Klasse gesetzt.
-	 * Falls dies nicht gewï¿½nscht ist, so kann {@link #getInstance(String, String, String, String[], String[])}
+	 * Die übrigen Parameter werden in dieser Methode standardmäßig in dieser Klasse gesetzt.
+	 * Falls dies nicht gewünscht ist, so kann {@link #getInstance(String, String, String, String[], String[])}
 	 * aufgerufen werden.
 	 * <p>
-	 * Fï¿½r die Bild-Dateiendungen wird hier standardmï¿½ï¿½ig der Array {@link #IMG_EXTENSIONS} ï¿½bernommen.
-     * Gleiches gilt fï¿½r die Schrift-Dateiendungen. Diese werden hier standardmï¿½ï¿½ig von 
-     * {@link #FONT_EXTENSIONS} ï¿½bergeben.
+	 * Für die Bild-Dateiendungen wird hier standardmäßig der Array {@link #IMG_EXTENSIONS} übernommen.
+     * Gleiches gilt für die Schrift-Dateiendungen. Diese werden hier standardmäßig von 
+     * {@link #FONT_EXTENSIONS} übergeben.
 	 * 
      * @param pImageFolder Ordner als String, aus dem die Bilder und Items importiert werden sollen.
      * @param pAvatarName  Name als String des Avatars, der als Spielfigur dient.
@@ -160,20 +160,20 @@ public class DataReader {
 	}
 	
 	/**
-	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurï¿½ck. Wenn bereits eine Instanz dieser Klasse 
-	 * vorhanden ist, so wird die existierende Instanz zurï¿½ckgegeben. Andernfalls wird eine neue
+	 * Gibt eine Instanz des {@link spriteLoader.DataReader} zurück. Wenn bereits eine Instanz dieser Klasse 
+	 * vorhanden ist, so wird die existierende Instanz zurückgegeben. Andernfalls wird eine neue
 	 * Instanz initialisiert.
 	 * Somit wird sicher gestellt, dass im AHF Simulator nur eine Instanz dieser Klasse existiert.
 	 * <p>
-     * Sofern die Bild-Dateiendungen, die dem FileReader ï¿½bergeben wurden, mit denen der {@link #IMG_EXTENSIONS} 
-     * ï¿½bereinstimmen, werden diese ignoriert und stattdessen der Array ï¿½bernommen, der standardmï¿½ï¿½ig gesetzt ist.
-     * Gleiches gilt fï¿½r die Schrift-Dateiendungen und den Array {@link #FONT_EXTENSIONS}.
+     * Sofern die Bild-Dateiendungen, die dem FileReader übergeben wurden, mit denen der {@link #IMG_EXTENSIONS} 
+     * übereinstimmen, werden diese ignoriert und stattdessen der Array übernommen, der standardmäßig gesetzt ist.
+     * Gleiches gilt für die Schrift-Dateiendungen und den Array {@link #FONT_EXTENSIONS}.
 	 * 
 	 * @param pImageFolder		Ordner als String, aus dem die Bilder und Items importiert werden sollen.
 	 * @param pFontFolder		Ordner als String, aus dem die Schriften importiert werden sollen.
 	 * @param pAvatarName		Name als String des Avatars, der als Spielfigur dient.
-	 * @param pImageExtensions	Array mit den Bilddateiendungen, die zu berï¿½cksichtigen sind.
-	 * @param pFontExtensions	Array mit den Schriftdateiendungen, die zu berï¿½cksichtigen sind.
+	 * @param pImageExtensions	Array mit den Bilddateiendungen, die zu berücksichtigen sind.
+	 * @param pFontExtensions	Array mit den Schriftdateiendungen, die zu berücksichtigen sind.
 	 * @return Instanz des FileReaders.
 	 * 
 	 * @see #getInstance(String, String)
@@ -186,7 +186,7 @@ public class DataReader {
 	}
 	
 	/**
-	 * Gibt die HashMap mit den importierten Schriften zurï¿½ck.
+	 * Gibt die HashMap mit den importierten Schriften zurück.
 	 * 
 	 * @return HashMap mit den importierten Schriften.
 	 */
@@ -195,7 +195,7 @@ public class DataReader {
 	}
     
 	/**
-	 * Gibt die HashMap mit den importierten Items und Bildern zurï¿½ck.
+	 * Gibt die HashMap mit den importierten Items und Bildern zurück.
 	 * 
 	 * @return HashMap mit den importierten Items.
 	 */
@@ -232,11 +232,11 @@ public class DataReader {
     
     /**
      * Importiert ein bestimmtes Bild mit einem absoluten Dateinamen 
-     * bzw.&nbsp;Pfad und skaliert es auf eine zu definierende Grï¿½ï¿½e. 
+     * bzw.&nbsp;Pfad und skaliert es auf eine zu definierende Größe. 
      * 
      * @param pImageFile der Dateiname des zu importierenden Bildes.
 	 * @param pWidth	 Breite, auf die das Bild skaliert werden soll.
-	 * @param pHeight    Hï¿½he, auf die das Bild skaliert werden soll.
+	 * @param pHeight    Höhe, auf die das Bild skaliert werden soll.
 	 * @return das skalierte und importierte Bild.
      */
 	private BufferedImage importAndScaleImage(String pImageFile, int pNewWidth, int pNewHeight) {
@@ -261,11 +261,11 @@ public class DataReader {
 	}
 	
 	/**
-	 * Skaliert ein Bild auf eine neue Grï¿½ï¿½e und gibt das skalierte Bild zurï¿½ck.
+	 * Skaliert ein Bild auf eine neue Größe und gibt das skalierte Bild zurück.
 	 * 
 	 * @param pImage Bild, das skaliert werden soll.
 	 * @param pWidth Breite, auf die das Bild skaliert werden soll.
-	 * @param pHeight Hï¿½he, auf die das Bild skaliert werden soll.
+	 * @param pHeight Höhe, auf die das Bild skaliert werden soll.
 	 * @return das skalierte Bild.
 	 */
 	private BufferedImage scaleImage(BufferedImage pImage, int pWidth, int pHeight) {
@@ -280,7 +280,7 @@ public class DataReader {
 	}
 	
 	/**
-	 * Erstellt einen neuen Dateifilter mit zu ï¿½bergebenden Dateiendungen.
+	 * Erstellt einen neuen Dateifilter mit zu übergebenden Dateiendungen.
 	 * 
 	 * @param pFileExtensions Dateiendungen als Array, nach den gefiltert werden soll.
 	 * @return Dateifilter

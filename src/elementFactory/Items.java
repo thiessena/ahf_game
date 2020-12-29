@@ -1,4 +1,4 @@
-package elementFactory;
+package src.elementFactory;
 
 public enum Items {
 	FLOOR(0),
@@ -13,7 +13,7 @@ public enum Items {
 	
 	private static String floor = "Boden";
 	private static String obstacle = "Hindernis";
-	private static String key = "Schlï¿½ssel";
+	private static String key = "Schlüssel";
 	private static String bucket = "Putzeimer";
 	private static String brush = "Pinsel";
 	private static String calculator = "Taschenrechner";

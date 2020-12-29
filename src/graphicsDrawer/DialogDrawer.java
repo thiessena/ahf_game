@@ -1,4 +1,4 @@
-package graphicsDrawer;
+package src.graphicsDrawer;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -12,12 +12,12 @@ import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.RoundRectangle2D;
 
-import elementFactory.avatarMoods;
-import mainPackage.ClientLabyrinth;
-import spriteLoader.SpriteLoader;
+import src.elementFactory.avatarMoods;
+import src.mainPackage.ClientLabyrinth;
+import src.spriteLoader.SpriteLoader;
 
 /**
- * Zeichnet Dialoge in ein vom ClientLabyrinth ï¿½bergegebenes Graphics Panel.
+ * Zeichnet Dialoge in ein vom ClientLabyrinth übergegebenes Graphics Panel.
  * 
  * @author Jonas Schweizer
  * @version 03.02.2020
@@ -49,7 +49,7 @@ public class DialogDrawer {
 	private static final int TOP = 11;
 
 	/**
-	 * Setzt die Member-Variablen, die vom ClientLabyrinth ï¿½bergeben wurden.
+	 * Setzt die Member-Variablen, die vom ClientLabyrinth übergeben wurden.
 	 * 
 	 * @param pLabyrinth ClientLabyrinth
 	 */
@@ -67,7 +67,7 @@ public class DialogDrawer {
 	}
 
 	/**
-	 * Zeichnet einen Kommunikationsdialog mit zwei Sprechblasen und zwei zu ï¿½bergebenden Textnachrichten.
+	 * Zeichnet einen Kommunikationsdialog mit zwei Sprechblasen und zwei zu übergebenden Textnachrichten.
 	 * 
 	 * @param g			Graphics, auf dem der Dialog gezeichnet werden soll.
 	 * @param pQuestion Frage, die in die obere Sprechblase geschrieben werden soll.
@@ -82,7 +82,7 @@ public class DialogDrawer {
 	}
 
 	/**
-	 * Zeichnet eine Dialog passend zu einem zu ï¿½begenden Item und einem zu ï¿½bergenden Quest.
+	 * Zeichnet eine Dialog passend zu einem zu übegenden Item und einem zu übergenden Quest.
 	 * 
 	 * @param g		   Graphics, auf dem der Dialog gezeichnet werden soll.
 	 * @param pItem	   Item, zu dem dieser Dialog gezeichnet werden soll.
@@ -172,23 +172,23 @@ public class DialogDrawer {
 	}
 	
 	/**
-	 * Zeichnet eine schï¿½ne Sprechblase mit geschwungenem Pfeil. 
-	 * Die Methode gibt einen Pfad in Form der Sprechblase zurï¿½ck.
+	 * Zeichnet eine schöne Sprechblase mit geschwungenem Pfeil. 
+	 * Die Methode gibt einen Pfad in Form der Sprechblase zurück.
 	 * 
-	 * @deprecated Die Methode malt zwar eine durchaus schï¿½nere Sprechblase als 
+	 * @deprecated Die Methode malt zwar eine durchaus schönere Sprechblase als 
 	 * {@link #drawBubble(Graphics, int, Color, double, double, double, double)}, jedoch 
-	 * sind ihre Parameter nur schwer zu verï¿½ndern. 
+	 * sind ihre Parameter nur schwer zu verändern. 
 	 * <p> 
 	 * Der bevorzugte Weg, eine Sprechblase zu zeichnen, ist durch Aufruf der obigen Methode.
 	 * 
-	 * @param pScale  Grï¿½ï¿½eneinheit bzw. Skalierungsfaktor, mit der die Sprechblase vergrï¿½ï¿½ert werden soll.
+	 * @param pScale  Größeneinheit bzw. Skalierungsfaktor, mit der die Sprechblase vergrößert werden soll.
 	 * @param x		  <code>x</code>-Koordinate vom Startpunkt der Sprechblase. 
 	 * 				  Der Startpunkt ist die obere linke Ecke mit dem Pfeil.
 	 * @param y		  <code>y</code>-Koordinate vom Startpunkt der Sprechblase. 
 	 * 				  Der Startpunkt ist die obere linke Ecke mit dem Pfeil.
 	 * @param pWidth  Breite der Sprechblase.
-	 * @param pHeight Hï¿½he der Sprechblase.
-	 * @return Pfad mit der Sprechblase. Der Pfad ist mit keiner Farbe gefï¿½llt!
+	 * @param pHeight Höhe der Sprechblase.
+	 * @return Pfad mit der Sprechblase. Der Pfad ist mit keiner Farbe gefüllt!
 	 */
 	@SuppressWarnings("unused")
 	@Deprecated
@@ -340,12 +340,12 @@ public class DialogDrawer {
 	}
 	
 	/**
-	 * Setzt Rendering Hints fï¿½r ein bestimmtes Graphics Panel.
+	 * Setzt Rendering Hints für ein bestimmtes Graphics Panel.
 	 * <p>
 	 * Rendering Hints beschreiben die Art und Weise, wie das Graphics Panel gezeichnet bzw.&nbsp;gerendert werden soll.
 	 * <p>
-	 * <b>Hinweis:</b> Diese Methode sollte nicht fï¿½r das Graphics Panel verwendet werden, auf dem der Irrgarten gezeichnet wird, 
-	 * sondern wird nur fï¿½r aufwendigere Zeichnungen, wie den Sprechblasen verwendet!
+	 * <b>Hinweis:</b> Diese Methode sollte nicht für das Graphics Panel verwendet werden, auf dem der Irrgarten gezeichnet wird, 
+	 * sondern wird nur für aufwendigere Zeichnungen, wie den Sprechblasen verwendet!
 	 * 
 	 * @param g2D Grahics, dessen Rendering Hints gesetzt werden sollen.
 	 */
@@ -356,9 +356,9 @@ public class DialogDrawer {
 	}
 
 	/**
-	 * ï¿½bermalt ein bestimmtes Graphics Panel mit einem leeren Rechteck in der Hintergrundfarbe vom Fenster.
+	 * Übermalt ein bestimmtes Graphics Panel mit einem leeren Rechteck in der Hintergrundfarbe vom Fenster.
 	 * 
-	 * @param g Graphics, das zu ï¿½bermalen ist.
+	 * @param g Graphics, das zu übermalen ist.
 	 */
 	private void clearPane(Graphics g) {
 		g.clearRect(0, 0, lWidth, lHeight);

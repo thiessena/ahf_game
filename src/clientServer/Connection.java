@@ -1,4 +1,4 @@
-package clientServer;
+package src.clientServer;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,8 +10,8 @@ import java.net.Socket;
  * Eine Connection ist ein Socket, der eine vereinfachte Ein- und Ausgabe
  * bietet.<br>
  * Die Verbindung ist nicht nebenl&auml;ufig realisiert.<br>
- * Da sie eine Unterklasse von Thread ist, können Unterklassen der
- * Verbindung nebenläufig arbeiten.
+ * Da sie eine Unterklasse von Thread ist, k&ouml;nnen Unterklassen der
+ * Verbindung nebenl&auml;ufig arbeiten.
  * 
  * @author Horst Hildebrecht
  * @version 1.0 vom 16.08.2006

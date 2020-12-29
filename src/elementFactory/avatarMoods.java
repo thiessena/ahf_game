@@ -1,4 +1,4 @@
-package elementFactory;
+package src.elementFactory;
 
 /**
  * Moods und Bewegungen, die ein Player annehmen kann.
@@ -40,7 +40,7 @@ public enum avatarMoods {
 	}
 	
 	/**
-	 * Gibt den Integer-Wert zurï¿½ck.
+	 * Gibt den Integer-Wert zurück.
 	 * 
 	 * @return Wert der Enumvariable
 	 */

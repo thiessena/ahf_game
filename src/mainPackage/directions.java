@@ -1,4 +1,4 @@
-package mainPackage;
+package src.mainPackage;
 
 /**
  * Richtungen, in die ein Player gehen kann.
@@ -23,7 +23,7 @@ public enum directions {
 	UP, 
 	
 	/**
-	 * Richtung unten / Sï¿½den
+	 * Richtung unten / Süden
 	 */
 	DOWN, 
 	
